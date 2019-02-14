@@ -49,10 +49,13 @@ export function darwin() {
   // Retains one per line to maintain readability.
   // clang-format off
   const priorities: Priorities = [
-    {regex: new RegExp(`^${process.env.HOME}/Applications/.*Chrome.app`), weight: 50},
-    {regex: new RegExp(`^${process.env.HOME}/Applications/.*Chrome Canary.app`), weight: 51},
-    {regex: /^\/Applications\/.*Chrome.app/, weight: 100},
-    {regex: /^\/Applications\/.*Chrome Canary.app/, weight: 101},
+    {regex: new RegExp(`^${process.env.HOME}/Applications/.*Chromium.app`), weight: 50},
+    {regex: new RegExp(`^${process.env.HOME}/Applications/.*Chrome.app`), weight: 51},
+    {regex: new RegExp(`^${process.env.HOME}/Applications/.*Chrome Canary.app`), weight: 52},
+    {regex: /^\/Applications\/.*Chromium.app/, weight: 100},
+    {regex: /^\/Applications\/.*Chrome.app/, weight: 101},
+    {regex: /^\/Applications\/.*Chrome Canary.app/, weight: 102},
+    {regex: /^\/Volumes\/.*Chromium.app/, weight: -3},
     {regex: /^\/Volumes\/.*Chrome.app/, weight: -2},
     {regex: /^\/Volumes\/.*Chrome Canary.app/, weight: -1},
   ];
